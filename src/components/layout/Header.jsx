@@ -5,7 +5,7 @@ export default function Header({
   projectName,
   onMenuToggle,
   onShowReport,
-  onBackToDashboard,
+  onUpdateProject,
 }) {
   return (
     <header className="app-header">
@@ -22,9 +22,18 @@ export default function Header({
         )}
 
         <div>
-          <h1 className="header-title" style={{ fontSize: view === 'calculator' ? 16 : 18 }}>
-            {view === 'dashboard' ? 'แดชบอร์ด' : projectName || 'โปรเจค'}
-          </h1>
+          {view === 'dashboard' ? (
+            <h1 className="header-title" style={{ fontSize: 18 }}>แดชบอร์ด</h1>
+          ) : (
+            <input
+              className="header-title-input"
+              type="text"
+              value={projectName || ''}
+              onChange={(e) => onUpdateProject({ name: e.target.value })}
+              placeholder="ชื่อโปรเจค..."
+              autoFocus={!projectName}
+            />
+          )}
           {view === 'calculator' && (
             <div className="header-breadcrumb">คำนวณผลตอบแทนการลงทุน</div>
           )}

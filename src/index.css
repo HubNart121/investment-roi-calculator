@@ -340,6 +340,24 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--gray-900);
 }
 
+.header-title-input {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-900);
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  min-width: 200px;
+  outline: none;
+  font-family: var(--font-thai);
+}
+
+.header-title-input:focus {
+  border-bottom: 2px solid var(--primary-500);
+}
+
 .header-breadcrumb {
   font-size: 13px;
   color: var(--gray-500);

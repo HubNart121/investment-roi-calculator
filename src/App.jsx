@@ -100,6 +100,7 @@ export default function App() {
         onMenuToggle={() => setSidebarOpen((v) => !v)}
         onShowReport={() => setShowReport(true)}
         onBackToDashboard={handleBackToDashboard}
+        onUpdateProject={(updates) => updateProject(activeProjectId, updates)}
       />
 
       <main className="app-main">

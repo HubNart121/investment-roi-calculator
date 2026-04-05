@@ -117,12 +117,47 @@ export default function InputPanel({ project, onUpdateData, onUpdateProject }) {
             </div>
 
             <div className="form-group">
-              <label className="form-label">📝 หมายเหตุ</label>
+              <label className="form-label">📝 รายละเอียดโครงการ</label>
+              <textarea
+                className="form-input"
+                value={data.description || ''}
+                onChange={(e) => handleChange('description', e.target.value)}
+                placeholder="ใส่รายละเอียดโครงการที่นี่ (สูงสุด 8 บรรทัด)..."
+                rows={8}
+                style={{ resize: 'vertical' }}
+              />
+            </div>
+
+            <div className="form-row">
+              <div className="form-group">
+                <label className="form-label">🔗 Link 1</label>
+                <input
+                  className="form-input"
+                  type="text"
+                  value={data.link1 || ''}
+                  onChange={(e) => handleChange('link1', e.target.value)}
+                  placeholder="https://..."
+                />
+              </div>
+              <div className="form-group">
+                <label className="form-label">🔗 Link 2</label>
+                <input
+                  className="form-input"
+                  type="text"
+                  value={data.link2 || ''}
+                  onChange={(e) => handleChange('link2', e.target.value)}
+                  placeholder="https://..."
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">📌 หมายเหตุ (เพิ่มเติม)</label>
               <textarea
                 className="form-input"
                 value={data.notes || ''}
                 onChange={(e) => handleChange('notes', e.target.value)}
-                placeholder="บันทึกรายละเอียดเพิ่มเติม..."
+                placeholder="บันทึกย่อ..."
                 rows={3}
                 style={{ resize: 'vertical' }}
               />

@@ -7,6 +7,9 @@ export const DEFAULT_PROJECT = {
     growthRate: 0,
     baseCashFlow: '',
     cashFlows: [],
+    description: '',
+    link1: '',
+    link2: '',
     notes: '',
   },
 }
