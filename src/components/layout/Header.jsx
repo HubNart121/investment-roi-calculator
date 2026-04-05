@@ -5,6 +5,7 @@ export default function Header({
   projectName,
   onMenuToggle,
   onShowReport,
+  onBackToDashboard,
   onUpdateProject,
 }) {
   return (
